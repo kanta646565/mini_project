@@ -1,6 +1,16 @@
 #!/usr/bin/env python3
+
 name = input("Your name: \n")
+lastname = input("Your lastname: \n")
+PLAYER={
+     'name': 'name',
+     'lastname' : 'lastname'
+     
+}
+
 Rank = int
+i = str
+
 
 Rank = 0
 again = int 
@@ -12,7 +22,7 @@ again = int
 
 
 
-'''======================= menu ======================='''
+'''======================= menu ============================================================'''
 
 def start():
     print("\n.\n.\n.\n.")
@@ -22,12 +32,19 @@ def start():
     print("lets start!")
         
 def rules() :
-    print("rule1 -------------------------------")
-    print("rule2 -------------------------------")
-    print("rule3 -------------------------------")
+    print("rule1 : You have to be 18 years old")
+    print("rule2 : You need to read your chosen answer")
+    print("rule3 : Rock beats Scissor")
+    print("rule4 : Scissor beats Paper")
+    print("rule5 : Paper beats Rock")
+    print("rule5 : If you choose the same as bot, it's a draw \n")
+    print("Tips : You can checked your rank in RANK at the menu")
+    print("Tips : Your rank rewrite after play next game")
+
     
 def rank():
-    print('hornor to : ',name)
+    global Rank
+    print('honor to : ',name,lastname)
     print("Your rank : " ,Rank)
     if Rank == 0 :
         print("no rank")
@@ -40,9 +57,25 @@ def rank():
     else :
         print("some thing is error")
 
-'''=========================================='''
+def Your_House_At42_Bangkok() :
+    global i
 
-'''=================== Games ======================='''
+    print('Your_House_At42_Bangkok') 
+    for i in range (1,11) :
+        print(i)
+    Yourhouse = input("insert your house in number \n")
+    return Yourhouse 
+    
+
+'''================================================================================================'''
+
+
+
+
+
+
+
+'''===================================== Games ====================================================='''
 def gameA():
     global Rank
     
@@ -90,11 +123,11 @@ def gameA():
     else:
         print('error')
         return
-        Rank = 0
+        
 
 
         
-
+'''========================================== while ========================================='''
 
 
 
@@ -106,8 +139,9 @@ while True:
     print("1. START")
     print("2. rules")
     print("3. rank")
-    print("4. ")
+    print("4. select your house")
     print("5. Exit \n")
+    print("CERT for certificate")
 
     choice = str(input("Choice: "))
 
@@ -132,8 +166,20 @@ while True:
     elif choice == '3' :
         rank()
         Rank = 0
+        home=input("Type anything to menu : ") 
+    elif choice == '4' :
+        Your_House_At42_Bangkok()
         home=input("Type anything to menu : ")        
     elif choice == '5':
-        break      
+        break 
+    elif choice == 'CERT' :
+        print("Thank you for playing our game\n")
+        print(f"This CERTIFICATE for {name} {lastname}")     
+         
+
     else :
         print("error")
+
+
+
+'''============================================= end ======================================='''
